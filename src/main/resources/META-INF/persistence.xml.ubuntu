@@ -8,7 +8,7 @@
 		<class>org.nick.entities.PurchaseInfoMediaItem</class>
 		<class>org.nick.entities.UserDetail</class>
 		<properties>
-			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://127.8.8.130:3306/MediaManager"/>
+			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://192.168.0.10:3306/MediaManager"/>
 			<property name="javax.persistence.jdbc.user" value="MediaManager"/>
 			<property name="javax.persistence.jdbc.password" value="mediamanager"/>
 			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
