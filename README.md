@@ -23,3 +23,5 @@ Created JAX-RS resource (services)
 Created Database Access Objects
 
 Played around with receiving parameters with NamedQueries
+
+Created develop branch for development purposes
