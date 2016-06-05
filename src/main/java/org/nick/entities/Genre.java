@@ -2,6 +2,8 @@ package org.nick.entities;
 
 import java.io.Serializable;
 import javax.persistence.*;
+import javax.xml.bind.annotation.XmlRootElement;
+
 import java.util.List;
 
 
@@ -10,6 +12,7 @@ import java.util.List;
  * 
  */
 @Entity
+@XmlRootElement(name="genre")
 @NamedQuery(name="Genre.findAll", query="SELECT g FROM Genre g")
 public class Genre implements Serializable {
 	private static final long serialVersionUID = 1L;
@@ -19,9 +22,9 @@ public class Genre implements Serializable {
 
 	private String genreDescription;
 
-	//bi-directional many-to-one association to MediaItem
-	@OneToMany(mappedBy="genre")
-	private List<MediaItem> mediaItems;
+//	//bi-directional many-to-one association to MediaItem
+//	@OneToMany(mappedBy="genre")
+//	private List<MediaItem> mediaItems;
 
 	public Genre() {
 	}
@@ -42,26 +45,26 @@ public class Genre implements Serializable {
 		this.genreDescription = genreDescription;
 	}
 
-	public List<MediaItem> getMediaItems() {
-		return this.mediaItems;
-	}
+//	public List<MediaItem> getMediaItems() {
+//		return this.mediaItems;
+//	}
+//
+//	public void setMediaItems(List<MediaItem> mediaItems) {
+//		this.mediaItems = mediaItems;
+//	}
 
-	public void setMediaItems(List<MediaItem> mediaItems) {
-		this.mediaItems = mediaItems;
-	}
-
-	public MediaItem addMediaItem(MediaItem mediaItem) {
-		getMediaItems().add(mediaItem);
-		mediaItem.setGenre(this);
-
-		return mediaItem;
-	}
-
-	public MediaItem removeMediaItem(MediaItem mediaItem) {
-		getMediaItems().remove(mediaItem);
-		mediaItem.setGenre(null);
-
-		return mediaItem;
-	}
+//	public MediaItem addMediaItem(MediaItem mediaItem) {
+//		getMediaItems().add(mediaItem);
+//		mediaItem.setGenre(this);
+//
+//		return mediaItem;
+//	}
+//
+//	public MediaItem removeMediaItem(MediaItem mediaItem) {
+//		getMediaItems().remove(mediaItem);
+//		mediaItem.setGenre(null);
+//
+//		return mediaItem;
+//	}
 
 }

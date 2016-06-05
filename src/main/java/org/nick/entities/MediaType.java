@@ -19,9 +19,9 @@ public class MediaType implements Serializable {
 
 	private String mediaTypeDescription;
 
-	//bi-directional many-to-one association to MediaItem
-	@OneToMany(mappedBy="mediaType")
-	private List<MediaItem> mediaItems;
+//	//bi-directional many-to-one association to MediaItem
+//	@OneToMany(mappedBy="mediaType")
+//	private List<MediaItem> mediaItems;
 
 	public MediaType() {
 	}
@@ -42,26 +42,26 @@ public class MediaType implements Serializable {
 		this.mediaTypeDescription = mediaTypeDescription;
 	}
 
-	public List<MediaItem> getMediaItems() {
-		return this.mediaItems;
-	}
+//	public List<MediaItem> getMediaItems() {
+//		return this.mediaItems;
+//	}
+//
+//	public void setMediaItems(List<MediaItem> mediaItems) {
+//		this.mediaItems = mediaItems;
+//	}
+//
+//	public MediaItem addMediaItem(MediaItem mediaItem) {
+//		getMediaItems().add(mediaItem);
+//		mediaItem.setMediaType(this);
+//
+//		return mediaItem;
+//	}
 
-	public void setMediaItems(List<MediaItem> mediaItems) {
-		this.mediaItems = mediaItems;
-	}
-
-	public MediaItem addMediaItem(MediaItem mediaItem) {
-		getMediaItems().add(mediaItem);
-		mediaItem.setMediaType(this);
-
-		return mediaItem;
-	}
-
-	public MediaItem removeMediaItem(MediaItem mediaItem) {
-		getMediaItems().remove(mediaItem);
-		mediaItem.setMediaType(null);
-
-		return mediaItem;
-	}
+//	public MediaItem removeMediaItem(MediaItem mediaItem) {
+//		getMediaItems().remove(mediaItem);
+//		mediaItem.setMediaType(null);
+//
+//		return mediaItem;
+//	}
 
 }
